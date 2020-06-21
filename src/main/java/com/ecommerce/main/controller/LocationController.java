@@ -29,17 +29,17 @@ public class LocationController {
 	public Location getLocationById(@PathVariable Integer id) {
 		return locationService.getLocationById(id);
 	}
-	
+
 	@PostMapping("/location/addlocation")
 	public void addNewLocation(@RequestBody Location location) {
 		locationService.addNewLocation(location);
 	}
-	
+
 	@PutMapping("/location/update/{id}")
 	public void updateLocation(@RequestBody Location location) {
 		locationService.updateLocation(location);
 	}
-	
+
 	@DeleteMapping("/location/delete/{id}")
 	public void deleteLocation(@PathVariable Integer id) {
 		locationService.deleteLocation(id);
